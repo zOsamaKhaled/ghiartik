@@ -22,13 +22,16 @@ export default function Profile() {
     const email = form.email;
     const password = form.password;
     const phone = form.phone;
-    const response = await fetch("http://localhost:5000/change_data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, phone, password }),
-    });
+    const response = await fetch(
+      "https://ghiartik-production.up.railway.app/change_data",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, phone, password }),
+      }
+    );
     await response.json();
     if (response.ok) {
       console.log("تم إنشاء الحساب بنجاح");

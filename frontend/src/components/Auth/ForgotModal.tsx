@@ -25,13 +25,16 @@ export default function ForgotModal({ onSwitch }: LoginModalProps) {
     const email = form.email;
     const newPassword = form.newPassword;
 
-    const response = await fetch("http://localhost:5000/forgot", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, newPassword }),
-    });
+    const response = await fetch(
+      "https://ghiartik-production.up.railway.app/forgot",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, newPassword }),
+      }
+    );
     await response.json();
     if (response.ok) {
       console.log("تم إعادة تعيين كلمة المرور بنجاح");
