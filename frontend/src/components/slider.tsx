@@ -14,6 +14,7 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 
 import { Button } from "@heroui/button";
+import { useNavigate } from "react-router-dom";
 const SLIDER_CONTENT = [
   {
     sub_title: "أقوى وأفضل العروض",
@@ -21,7 +22,7 @@ const SLIDER_CONTENT = [
     description:
       "اكتشف مجموعة واسعة من قطع الغيار الأصلية بأعلى جودة وأفضل أداء لسيارتك.",
     image: "/slider/slider4.jpg",
-    offerId: "/1",
+    offerId: "/vendors/11",
   },
   {
     sub_title: "تجربة قيادة آمنة",
@@ -29,7 +30,7 @@ const SLIDER_CONTENT = [
     description:
       "قطع الغيار لدينا مصممة لضمان سلامتك وتحسين أداء سيارتك بأفضل الأسعار.",
     image: "/slider/slider3.jpg",
-    offerId: "/2",
+    offerId: "/vendors/8",
   },
   {
     sub_title: "جودة موثوقة",
@@ -37,7 +38,7 @@ const SLIDER_CONTENT = [
     description:
       "نوفر لك قطع غيار تتحمل أقسى الظروف مع الحفاظ على جودة السيارة وكفاءتها.",
     image: "/slider/slider2.jpg",
-    offerId: "/3",
+    offerId: "/vendors/3",
   },
   {
     sub_title: "أفضل الصفقات",
@@ -45,13 +46,14 @@ const SLIDER_CONTENT = [
     description:
       "استفد من العروض المميزة واحصل على قطع غيار أصلية تضمن لك الأداء الأمثل .",
     image: "/slider/slider.jpg",
-    offerId: "/4",
+    offerId: "/vendors/4",
   },
 ];
 
 function MainSlider() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const navigate = useNavigate();
   return (
     <div className="flex flex-col items-center justify-center ">
       <Swiper
@@ -107,6 +109,7 @@ function MainSlider() {
                     className="text-sm font-normal text-default-600 bg-default-100 w-44 hover:bg-primary hover:text-white"
                     href={slide.offerId}
                     variant="flat"
+                    onPress={() => navigate(slide.offerId)}
                   >
                     المزيد
                   </Button>
