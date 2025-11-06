@@ -1,0 +1,25 @@
+.menu-active {
+  color: #628f15;
+}
+
+.swiper-pagination-bullet {
+  opacity: 1 !important;
+  background-color: #ffffff81 !important;
+}
+
+.custom-bullet-active {
+  background-color: #628f15 !important;
+  width: 15px !important;
+  border-radius: 8px !important;
+}
+
+.active_slide {
+  background-color: #f4f4f5;
+
+  border: 1px solid var(--color-primary);
+  transition: border 0.5s !important;
+}
+
+.dark .active_slide {
+  background-color: #628f15;
+}

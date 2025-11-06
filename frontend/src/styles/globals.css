@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.js";
+
+@theme {
+  --color-primary: #628f15;
+  --color-secondary: #383838;
+  --color-primary-light: #b2d46b;
+  --color-secondary-light: #a8a8a8;
+  --color-icon: #ababab;
+  --color-border: #d9d9d9;
+  --color-light-black: #535353;
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-background: #f9f9f9;
+}
+
+/* ألوان الوضع الداكن */
+.dark {
+  --color-primary: #628f15; /* العكس بتاع الأخضر الغامق */
+  --color-secondary: #f1f1f1;
+  --color-primary-light: #b2d46b;
+  --color-secondary-light: #383838;
+  --color-icon: #666;
+  --color-border: #444;
+  --color-light-black: #e2e2e2;
+
+  --color-background: #121212;
+}
+
+.social-sm-icons {
+  @apply text-xl transition-all duration-300 text-icon hover:text-primary;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px; /* سمك الشريط */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f0f0f0; /* خلفية المسار */
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary); /* لون المؤشر */
+  border-radius: 8px;
+  border: 0px solid #f0f0f0; /* مسافة padding صغيرة */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* لون عند hover */
+}
+
+@font-face {
+  font-family: "neo-sans";
+  src: url("/fonts/NeoSansArabic-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neo-sans";
+  src: url("/fonts/NeoSansArabic-reg.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neo-sans";
+  src: url("/fonts/NeoSansArabic-med.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neo-sans";
+  src: url("/fonts/NeoSansArabic-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  font-family: "neo-sans", sans-serif;
+}
+
+/* Tailwind داخل ملف CSS */
+input[type="file"]::file-selector-button {
+  background-color: transparent;
+  border: none;
+  color: #999;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* لإخفاء النص "No file chosen" */
+input[type="file"]::-webkit-file-upload-text {
+  visibility: hidden;
+}

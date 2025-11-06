@@ -1,0 +1,8 @@
+.vendor_info_top .info_left .social a {
+  font-size: 20px;
+  color: #ababab;
+  transition: 0.3s;
+}
+.vendor_info_top .info_left .social a:hover {
+  color: #628f15;
+}
