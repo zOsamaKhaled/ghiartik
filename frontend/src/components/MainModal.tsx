@@ -45,7 +45,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "login" && (
-            <div className="bg-white p-8 rounded-2xl w-[400px]">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl w-[400px]">
               <LoginModal
                 onSwitch={() => dispatch(openModal("register"))}
                 onForgot={() => dispatch(openModal("forgot"))}
@@ -60,7 +60,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "register" && (
-            <div className="bg-white p-8 rounded-2xl w-[400px]">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl w-[400px]">
               <SignUpModal
                 onSwitch={() => dispatch(openModal("login"))}
                 onForgot={() => dispatch(openModal("forgot"))}
@@ -75,7 +75,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "forgot" && (
-            <div className="bg-white p-8 rounded-2xl w-[400px]">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl w-[400px]">
               <ForgotModal onSwitch={() => dispatch(openModal("login"))} />
             </div>
           )}
@@ -87,7 +87,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "addCarModal" && (
-            <div className="bg-white p-8 rounded-2xl md:w-[750px] w-full">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl md:w-[750px] w-full">
               <CarModal mode="add" />
             </div>
           )}
@@ -99,7 +99,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "editCarModal" && (
-            <div className="bg-white p-8 rounded-2xl md:w-[750px] w-full">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl md:w-[750px] w-full">
               <CarModal mode="edit" carId={editCarId} />
             </div>
           )}
@@ -111,7 +111,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "addAddressModal" && (
-            <div className="bg-white p-8 rounded-2xl md:w-[750px] w-full">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl md:w-[750px] w-full">
               <AddressModal mode="add" />
             </div>
           )}
@@ -123,7 +123,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "editAddressModal" && (
-            <div className="bg-white p-8 rounded-2xl  md:w-[750px] w-full">
+            <div className="bg-white dark:bg-[#1e1e1e] p-8 rounded-2xl  md:w-[750px] w-full">
               <AddressModal mode="edit" addressId={editAddressId} />
             </div>
           )}
@@ -135,7 +135,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "invoiceModal" && (
-            <div className="bg-[#ebebeb] p-8 rounded-2xl md:w-[400px] w-full">
+            <div className="bg-[#ebebeb] dark:bg-[#1e1e1e] p-8 rounded-2xl md:w-[400px] w-full">
               <InvoiceModal />
             </div>
           )}
@@ -147,7 +147,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "signOutModal" && (
-            <div className="bg-[#ebebeb] p-8 rounded-2xl w-[400px]">
+            <div className="bg-[#ebebeb] dark:bg-[#1e1e1e] p-8 rounded-2xl w-[400px]">
               <SignOutModal />
             </div>
           )}
@@ -159,7 +159,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "priceReqModal" && (
-            <div className="bg-[#ebebeb] p-8 rounded-2xl w-[400px]">
+            <div className="bg-[#ebebeb] dark:bg-[#1e1e1e] p-8 rounded-2xl w-[400px]">
               <PriceReqModal />
             </div>
           )}
@@ -171,7 +171,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "complainModal" && (
-            <div className="bg-[#ebebeb] p-8 rounded-2xl w-[600px]">
+            <div className="bg-[#ebebeb] dark:bg-[#1e1e1e] p-8 rounded-2xl w-[600px]">
               <ComplainModal />
             </div>
           )}
@@ -184,7 +184,7 @@ export default function MainModal() {
           transition={{ duration: 0.3, ease: "easeInOut" }}
         >
           {type === "payModal" && (
-            <div className="bg-[#ebebeb] p-8 rounded-2xl w-[600px]">
+            <div className="bg-[#ebebeb] dark:bg-[#1e1e1e] p-8 rounded-2xl w-[600px]">
               <PayModal />
             </div>
           )}

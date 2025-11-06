@@ -122,11 +122,6 @@ export const siteConfig = {
       icon: <CiCircleQuestion />,
     },
     {
-      label: "اللغة",
-      href: "/language",
-      icon: <CiGlobe />,
-    },
-    {
       label: "حول المنصة",
       href: "/about",
       icon: <CiCircleAlert />,

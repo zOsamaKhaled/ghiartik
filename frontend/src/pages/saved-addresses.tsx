@@ -39,7 +39,7 @@ export default function SavedAddresses() {
                       <TbHomeRibbon className="text-3xl" />
                     </div>
                     <div className="w-[85%] text-right">
-                      <h4 className="font-normal text-black md:font-medium text-medium ">
+                      <h4 className="font-normal text-black dark:text-[#fff] md:font-medium text-medium ">
                         {a.region} - {a.city} - {a.district}
                       </h4>
                       <p className="text-sm text-icon">

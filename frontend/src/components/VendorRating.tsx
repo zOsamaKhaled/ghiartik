@@ -162,7 +162,7 @@ export default function VendorRating() {
             return (
               <SwiperSlide
                 key={index}
-                className="relative flex items-center justify-start p-4 transition duration-500 bg-white rounded-4xl border-1 border-icon hover:bg-default-50 hover:border-primary"
+                className="relative flex items-center justify-start p-4 transition duration-500 bg-white rounded-4xl border-1 dark:bg-[#0d1117]  border-icon hover:bg-default-50 hover:border-primary"
                 style={{
                   height: "auto",
                 }}
@@ -185,7 +185,7 @@ export default function VendorRating() {
 
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center justify-between">
-                        <p className="text-right text-black text-md md:text-lg">
+                        <p className="text-right text-black dark:text-[#fff] text-md md:text-lg">
                           {slide.name}
                         </p>
                         <div>{renderStars(slide.rating)}</div>

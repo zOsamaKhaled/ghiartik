@@ -163,7 +163,7 @@ export default function BeVendor() {
         {/* About Us */}
         <div className="flex flex-col w-full gap-6 p-4 my-8 md:p-12 border-y-1 border-border rounded-3xl ">
           <FormProvider {...methods}>
-            <div className="w-full p-2 mx-auto mt-10 bg-white md:p-6 md:max-w-4xl rounded-2xl">
+            <div className="w-full p-2 mx-auto mt-10 md:p-6 md:max-w-4xl rounded-2xl">
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="w-full space-y-5 transition-all"
@@ -910,7 +910,7 @@ export default function BeVendor() {
                       <Button
                         type="button"
                         onPress={prevStep}
-                        className="px-4 py-2 text-white rounded-lg bg-secondary hover:bg-transparent border-1 border-secondary hover:text-secondary"
+                        className="px-4 py-2 text-white rounded-lg bg-secondary hover:bg-transparent border-1 border-secondary dark:text-[#000] dark:hover:bg-[#eee] hover:text-secondary"
                       >
                         رجوع
                       </Button>
