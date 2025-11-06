@@ -2,7 +2,6 @@ import {
   CiUser,
   CiLocationOn,
   CiHeart,
-  CiGlobe,
   CiPhone,
   CiFileOn,
   CiChat1,
