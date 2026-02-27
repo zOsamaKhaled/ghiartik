@@ -29,16 +29,23 @@ export default function SignUpModal({ onSwitch, onForgot }: LoginModalProps) {
     const password = form.password;
     const phone = form.phone;
 
-    const response = await fetch(
-      "https://ghiartik-production.up.railway.app/register",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, phone, password }),
-      }
-    );
+    // const response = await fetch(
+    //   "https://ghiartik-production.up.railway.app/register",
+    //   {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify({ email, phone, password }),
+    //   }
+    // );
+    const response = await fetch("/api/server?register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, phone, password }),
+    });
     await response.json();
     if (response.ok) {
       console.log("تم إنشاء الحساب بنجاح");

@@ -28,27 +28,50 @@ export default function LoginModal({ onSwitch, onForgot }: LoginModalProps) {
     const email = form.email;
     const password = form.password;
 
+    // try {
+    //   const response = await fetch(
+    //     "https://ghiartik-production.up.railway.app/login",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({ email, password }),
+    //     }
+    //   );
+    //   const data = await response.json();
+    //   // حاول أولاً التحقق من response.ok قبل parse
+    //   if (data.token) {
+    //     // parse JSON بعد التأكد
+    //     localStorage.setItem("token", data.token);
+    //     navigate("/");
+    //     dispatch(closeModal());
+    //   }
+    // } catch (error) {
+    //   alert("Error:" + error);
+    // }
     try {
-      const response = await fetch(
-        "https://ghiartik-production.up.railway.app/login",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const response = await fetch("/api/server?login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
       const data = await response.json();
-      // حاول أولاً التحقق من response.ok قبل parse
+
       if (data.token) {
-        // parse JSON بعد التأكد
         localStorage.setItem("token", data.token);
         navigate("/");
         dispatch(closeModal());
       }
     } catch (error) {
-      alert("Error:" + error);
+      console.error(error);
     }
   };
 
