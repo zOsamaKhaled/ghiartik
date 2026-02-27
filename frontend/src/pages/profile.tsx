@@ -18,28 +18,53 @@ export default function Profile() {
 
   const toggleVisibility = () => setIsVisible(!isVisible);
 
+  // const handleDataChange = async () => {
+  //   const email = form.email;
+  //   const password = form.password;
+  //   const phone = form.phone;
+  //   const response = await fetch(
+  //     "https://ghiartik-production.up.railway.app/change_data",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({ email, phone, password }),
+  //     }
+  //   );
+  //   await response.json();
+  //   if (response.ok) {
+  //     console.log("تم إنشاء الحساب بنجاح");
+  //   } else {
+  //     console.log("حدث خطأ ما");
+  //   }
+  // };
   const handleDataChange = async () => {
-    const email = form.email;
-    const password = form.password;
-    const phone = form.phone;
-    const response = await fetch(
-      "https://ghiartik-production.up.railway.app/change_data",
-      {
+    try {
+      const email = form.email;
+      const password = form.password;
+      const phone = form.phone;
+
+      const response = await fetch("/api/server?change_data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ email, phone, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        console.log("حدث خطأ ما", data);
+        return;
       }
-    );
-    await response.json();
-    if (response.ok) {
-      console.log("تم إنشاء الحساب بنجاح");
-    } else {
-      console.log("حدث خطأ ما");
+
+      console.log("تم تحديث البيانات بنجاح", data);
+    } catch (error) {
+      console.error("Request failed:", error);
     }
   };
-
   const dispatch = useDispatch();
   // const handleLogout = () => {
   //   localStorage.removeItem("token");
